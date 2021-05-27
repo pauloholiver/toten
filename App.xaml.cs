@@ -1,4 +1,5 @@
-﻿using Eticket.Infra.CrossCutting.IoC;
+﻿using Eticket.Application.ViewModels;
+using Eticket.Infra.CrossCutting.IoC;
 using SimpleInjector;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Zip.Toten.Views;
 
 namespace Zip.Toten
 {
@@ -16,6 +18,8 @@ namespace Zip.Toten
     public partial class App : Application
     {
         public static Container Container;
+
+        public static VendaViewModel VendaViewModel;
         protected override void OnStartup(StartupEventArgs e)
         {
             Bootstrap();
